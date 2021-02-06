@@ -8,12 +8,17 @@ body {
   background-color: #121212;
 }
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: #5d001e;
 }
 .navbar > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(50px, auto);
+  grid-auto-rows: 50px;
   align-items: center;
 }
 .navbar ul li {
@@ -25,15 +30,18 @@ body {
   padding: 1em;
 }
 .container {
+  visibility: hidden;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-auto-rows: minmax(100px, auto);
 }
 .container > div {
   background-color: lightcoral;
+  padding: 1em;
 }
 .container > div:nth-child(odd) {
-  background-color: red;
+  background-color: #9a1750;
 }
 .App-logo {
   opacity: 0;
@@ -44,4 +52,23 @@ body {
 }
 .text-title {
   opacity: 0;
+}
+.text-second {
+  opacity: 0;
+  position: relative;
+  right: 60px;
+}
+.circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  background-color: #e3afbc;
+  margin: 50px;
+  cursor: pointer;
+}
+.circle.red {
+  background-color: #fd5151;
+}
+.circle.black {
+  background-color: #121212;
 }

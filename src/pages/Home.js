@@ -4,11 +4,13 @@ import '../App.css';
 import { TweenMax, Power3 } from 'gsap'
 
 const Home = () => {
+    let container = useRef(null)
     let logoItem = useRef(null)
     let textItem = useRef(null)
     let textItemLeft = useRef(null)
   
     useEffect(() => {
+      TweenMax.to(container, 0, { css: {visibility: 'visible' }})
       TweenMax.to(
         logoItem,
         1.5,
@@ -39,7 +41,7 @@ const Home = () => {
     },[])
       
     return (
-        <div className="container">
+        <div ref={el => { container = el }} className="container">
             <div>
                 <p className="text-title" ref={el => {textItemLeft = el}}>
                     Edit <code>src/App.js</code> and save to reload.
