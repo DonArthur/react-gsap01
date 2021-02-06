@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react'
 import logo from '../assets/images/man-united.png';
-import '../App.css';
 import { TweenMax, Power3 } from 'gsap'
 
 const Home = () => {
